@@ -20,6 +20,9 @@ var a App // references the main application (application we want to test)
 
 // executed before all other tests to ensure cleanup of database etc
 func TestMain(m *testing.M) {
+
+	log.Println("This is a change in code for testing travisCI.")
+
 	a.Initialize(
 		os.Getenv("APP_DB_USERNAME"), // these must be set as environment variables
 		os.Getenv("APP_DB_PASSWORD"),
