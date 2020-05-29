@@ -10,8 +10,8 @@ services:
     - docker
     
 
-before_script:
-  - psql -c "CREATE DATABASE postgres;" -U postgres
+#before_script:
+#  - psql -c "CREATE DATABASE postgres;" -U postgres
 
 script:
     # Test the code
