@@ -1,4 +1,4 @@
-os: windows
+os: linux
 
 language: go
 
@@ -9,6 +9,10 @@ services:
     - postgresql
     - docker
     
+
+before_script:
+  - psql -c "CREATE DATABASE postgres;" -U postgres
+
 script:
     # Test the code
     - go test -v ./...

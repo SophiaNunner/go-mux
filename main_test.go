@@ -28,6 +28,8 @@ func TestMain(m *testing.M) {
 		os.Getenv("APP_DB_PASSWORD"),
 		os.Getenv("APP_DB_NAME"))
 
+	a.Initialize
+
 	ensureTableExists() // before running tests, check availability of database table
 	code := m.Run()     // run all tests
 	clearTable()        // cleanup database
